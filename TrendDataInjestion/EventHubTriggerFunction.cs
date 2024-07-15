@@ -3,10 +3,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Azure.Messaging.EventHubs;
 using Azure.Messaging.EventHubs.Producer;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.Azure.Cosmos.Table;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using TrendEventData;
+using static Grpc.Core.Metadata;
 
 namespace TrendDataInjestion
 {
@@ -15,98 +18,77 @@ namespace TrendDataInjestion
         private static readonly string connectionString = Environment.GetEnvironmentVariable("TrendEventHubConnectionString");
         private static readonly string eventHubName = Environment.GetEnvironmentVariable("TrendEventHubName");
         private static readonly string tableconnectionString = Environment.GetEnvironmentVariable("TableStorageConnectionString");
-        public class MyEventDataClass // Define a class to represent your event data
+
+        private readonly ITrendDataRepository _trendDataRepository;
+        private readonly ITableStorageRepository _tableStorageRepository;
+        private readonly ILogger<EventHubTriggerFunction> _logger;
+
+        public EventHubTriggerFunction(ITrendDataRepository trendDataRepository, ITableStorageRepository tableStorageRepository, ILogger<EventHubTriggerFunction> logger)
+        {
+            _trendDataRepository = trendDataRepository;
+            _tableStorageRepository = tableStorageRepository;
+            _logger = logger;
+        }
+      
+        
+        public class TrendDataItem
+        {
+            public string Tag { get; set; }
+            public double V { get; set; }
+            public long T { get; set; }
+        }
+
+        public class TrendDataEvent
         {
             public string DeviceId { get; set; }
-            public double Temperature { get; set; }
-            public double Humidity { get; set; }
-
-            public long TimeStamp {  get; set; }
-            // Add other properties as needed
+            
         }
 
 
         [Function(nameof(EventHubTriggerFunction))]
-        public static async Task Run(
+        public async Task RunAsync(
             [EventHubTrigger("%TrendEventHubName%", Connection = "TrendEventHubConnectionString")] string[] events,
             FunctionContext context)
         {
             var logger = context.GetLogger<EventHubTriggerFunction>();
-            var eventHubClient = new EventHubProducerClient(connectionString, eventHubName);
 
-            List<EventData> eventDataList = new List<EventData>();
-
-            var tableClient = CloudStorageAccount.Parse(tableconnectionString).CreateCloudTableClient(new TableClientConfiguration());
-
-            var table = tableClient.GetTableReference("TrendDataTable");
             foreach (string eventData in events)
             {
                 try
                 {
-                    logger.LogInformation($"Received message: {eventData}");
+                    
+                    var trendDataEvent = JsonConvert.DeserializeObject<dynamic>(eventData);
+                    logger.LogInformation($"Received json message: {trendDataEvent}");
 
-                    var jsonMessage = JsonConvert.DeserializeObject<dynamic>(eventData);
-                   
-
-                    // Extract DeviceId
-                    string deviceId = jsonMessage.d;
-
-                    // Extract Temperature and Humidity from "trend" array
-                    double temperature = 0;
-                    double humidity = 0;
+                    string deviceId = trendDataEvent.d;
                     long time = 0;
-
-                    foreach (var item in jsonMessage.trend)
+                    long tagId = 0;
+                    foreach (var item in trendDataEvent.trend)
                     {
-                        if (item.Tag == "Temp")
-                        {
-                            temperature = (double)item.V;
-                            time=(long)item.T;
 
-                        }
-                        else if (item.Tag == "Humidity")
+                      
+                       string deviceprofileId =  Guid.NewGuid().ToString();
+                        var eventDataEntity = new TrendDataTableEntity(trendDataEvent.d, time)
                         {
-                            humidity = (double)item.V;
-                            time = (long)item.T;
-                        }
+                            DeviceId = deviceId,
+                            TagId = item.V,
+                            Timestamp = item.T,
+                            DeviceProfileId = deviceprofileId, // Assuming DeviceProfileId is the same as DeviceId
+                            Status = true // Example of setting Status
+                        };
+                        await _tableStorageRepository.StoreEntityAsync(eventDataEntity);
+                        logger.LogInformation($" DeviceId: {eventDataEntity.DeviceId} details Successfully Stored in Azure Table Storage");
                     }
-
-
-                    var eventDataEntity = new TrendDataTableEntity(deviceId, time.ToString())
-                    {
-                        //PartitionKey = deviceId,
-                        //RowKey =time.ToString(),
-                        DeviceId = deviceId,
-                        Temperature = temperature,
-                        Humidity = humidity,
-                        TimeStamp = time
-                    };
-
-
-                    var insertOperation = TableOperation.Insert(eventDataEntity);
-                    await table.ExecuteAsync(insertOperation);
-
-                    logger.LogInformation($"Stored in Azure Table Storage: DeviceId: {eventDataEntity.DeviceId}," +
-                                          $" Temperature: {eventDataEntity.Temperature}," +
-                                          $" Humidity: {eventDataEntity.Humidity}, " +
-                                          $"TimeStamp:{eventDataEntity.TimeStamp}");
-
-                   
-
-                    // Example: Sending to another event hub
-                    await eventHubClient.SendAsync(eventDataList);
-
-                   
-
                 }
+
                 catch (Exception e)
                 {
                     logger.LogError($"Error processing event: {e.Message}");
-                   
+
                 }
             }
 
-            await eventHubClient.CloseAsync();
+            
         }
     }
 }

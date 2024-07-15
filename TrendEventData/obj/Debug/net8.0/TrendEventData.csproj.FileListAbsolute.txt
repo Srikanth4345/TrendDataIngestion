@@ -1,0 +1,13 @@
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.csproj.AssemblyReference.cache
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.AssemblyInfoInputs.cache
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.AssemblyInfo.cs
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.csproj.CoreCompileInputs.cache
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.sourcelink.json
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\bin\Debug\net8.0\ref\Debug\net8.0\TrendEventData.deps.json
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\bin\Debug\net8.0\ref\Debug\net8.0\TrendEventData.dll
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\bin\Debug\net8.0\ref\Debug\net8.0\TrendEventData.pdb
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.dll
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\refint\TrendEventData.dll
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\TrendEventData.pdb
+C:\Users\lttsadmin\TrendDataInjestion\TrendEventData\obj\Debug\net8.0\ref\TrendEventData.dll

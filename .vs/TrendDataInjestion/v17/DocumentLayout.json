@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|solutionrelative:trenddatainjestion\\eventhubtriggerfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trenddatainjestion\\trenddatatableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|solutionrelative:trenddatainjestion\\trenddatatableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trendeventdata\\trenddata\\trenddatatableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|solutionrelative:trendeventdata\\trenddata\\trenddatatableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trendeventdata\\trenddata\\trenddatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|solutionrelative:trendeventdata\\trenddata\\trenddatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trendeventdata\\trenddata\\tablestoragerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|solutionrelative:trendeventdata\\trenddata\\tablestoragerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trenddatainjestion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +27,8 @@
       "RelativeMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|solutionrelative:trenddatainjestion\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trenddatainjestion\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{38A8D342-EBEA-4701-9980-C1DA953CE752}|TrendDataInjestion\\TrendDataInjestion.csproj|solutionrelative:trenddatainjestion\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|c:\\users\\lttsadmin\\trenddatainjestion\\trendeventdata\\itrenddata\\itrenddatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37DA7630-9A5B-4C96-AB6F-74B7CC493B7D}|TrendEventData\\TrendEventData.csproj|solutionrelative:trendeventdata\\itrenddata\\itrenddatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,55 +38,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TrendDataTableEntity.cs",
-              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\TrendDataTableEntity.cs",
-              "RelativeDocumentMoniker": "TrendDataInjestion\\TrendDataTableEntity.cs",
-              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\TrendDataTableEntity.cs",
-              "RelativeToolTip": "TrendDataInjestion\\TrendDataTableEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T06:42:25.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "host.json",
-              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\host.json",
-              "RelativeDocumentMoniker": "TrendDataInjestion\\host.json",
-              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\host.json",
-              "RelativeToolTip": "TrendDataInjestion\\host.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-05T11:15:11.979Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\Program.cs",
-              "RelativeDocumentMoniker": "TrendDataInjestion\\Program.cs",
-              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\Program.cs",
-              "RelativeToolTip": "TrendDataInjestion\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T07:32:06.289Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "local.settings.json",
               "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\local.settings.json",
               "RelativeDocumentMoniker": "TrendDataInjestion\\local.settings.json",
               "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\local.settings.json",
               "RelativeToolTip": "TrendDataInjestion\\local.settings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-05T07:28:10.184Z"
+              "WhenOpened": "2024-07-15T06:10:48.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TableStorageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\TrendData\\TableStorageRepository.cs",
+              "RelativeDocumentMoniker": "TrendEventData\\TrendData\\TableStorageRepository.cs",
+              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\TrendData\\TableStorageRepository.cs",
+              "RelativeToolTip": "TrendEventData\\TrendData\\TableStorageRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T05:52:51.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrendDataTableEntity.cs",
+              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\TrendData\\TrendDataTableEntity.cs",
+              "RelativeDocumentMoniker": "TrendEventData\\TrendData\\TrendDataTableEntity.cs",
+              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\TrendData\\TrendDataTableEntity.cs",
+              "RelativeToolTip": "TrendEventData\\TrendData\\TrendDataTableEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T05:51:49.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITrendDataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\ITrendData\\ITrendDataRepository.cs",
+              "RelativeDocumentMoniker": "TrendEventData\\ITrendData\\ITrendDataRepository.cs",
+              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\ITrendData\\ITrendDataRepository.cs",
+              "RelativeToolTip": "TrendEventData\\ITrendData\\ITrendDataRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T05:34:02.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrendDataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\TrendData\\TrendDataRepository.cs",
+              "RelativeDocumentMoniker": "TrendEventData\\TrendData\\TrendDataRepository.cs",
+              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendEventData\\TrendData\\TrendDataRepository.cs",
+              "RelativeToolTip": "TrendEventData\\TrendData\\TrendDataRepository.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAA7wBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T05:32:11.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\Program.cs",
+              "RelativeDocumentMoniker": "TrendDataInjestion\\Program.cs",
+              "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\Program.cs",
+              "RelativeToolTip": "TrendDataInjestion\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:32:06.289Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -88,7 +126,7 @@
               "RelativeDocumentMoniker": "TrendDataInjestion\\EventHubTriggerFunction.cs",
               "ToolTip": "C:\\Users\\lttsadmin\\TrendDataInjestion\\TrendDataInjestion\\EventHubTriggerFunction.cs",
               "RelativeToolTip": "TrendDataInjestion\\EventHubTriggerFunction.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAmwHIAAAAAAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAADwv0oAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T06:00:33.109Z",
               "EditorCaption": ""
