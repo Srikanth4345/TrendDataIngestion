@@ -10,13 +10,8 @@ namespace TrendEventData
     {
         
             Task TrendDataInsertionAsync(TrendDataTableEntity entity);
-            Task<List<TrendDataTableEntity>> TrendDataRetrievalAsync(string partitionKey, DateTime startTime, DateTime endTime);
-         //   Task<List<TrendDataTableEntity>> RetrieveEntitiesByTimeRangeAsync(string partitionKey, DateTime startTime, DateTime endTime);
-        
+           // Task<List<TrendDataTableEntity>> TrendDataRetrievalAsync(string partitionKey, DateTime startTime, DateTime endTime);
+       
 
     }
-}
-public interface ITableStorageRepository
-{
-    Task StoreEntityAsync(TrendDataTableEntity entity);
 }

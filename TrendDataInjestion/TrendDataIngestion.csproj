@@ -35,8 +35,4 @@
   <ItemGroup>
     <Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataIngestion\" />
-    <Folder Include="IDatIngestion\" />
-  </ItemGroup>
 </Project>

@@ -6,12 +6,13 @@ using Azure.Messaging.EventHubs.Producer;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Azure.Cosmos.Table;
 using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using TrendEventData;
-using static Grpc.Core.Metadata;
 
-namespace TrendDataInjestion
+
+namespace TrendDataIngestion
 {
     public class EventHubTriggerFunction
     {
@@ -20,17 +21,17 @@ namespace TrendDataInjestion
         private static readonly string tableconnectionString = Environment.GetEnvironmentVariable("TableStorageConnectionString");
 
         private readonly ITrendDataRepository _trendDataRepository;
-        private readonly ITableStorageRepository _tableStorageRepository;
+ 
         private readonly ILogger<EventHubTriggerFunction> _logger;
 
-        public EventHubTriggerFunction(ITrendDataRepository trendDataRepository, ITableStorageRepository tableStorageRepository, ILogger<EventHubTriggerFunction> logger)
+        public EventHubTriggerFunction(ITrendDataRepository trendDataRepository, ILogger<EventHubTriggerFunction> logger)
         {
             _trendDataRepository = trendDataRepository;
-            _tableStorageRepository = tableStorageRepository;
             _logger = logger;
         }
-      
-        
+
+       
+
         public class TrendDataItem
         {
             public string Tag { get; set; }
@@ -56,27 +57,27 @@ namespace TrendDataInjestion
             {
                 try
                 {
-                    
+
                     var trendDataEvent = JsonConvert.DeserializeObject<dynamic>(eventData);
                     logger.LogInformation($"Received json message: {trendDataEvent}");
 
                     string deviceId = trendDataEvent.d;
-                    long time = 0;
+                   
+                   
                     long tagId = 0;
                     foreach (var item in trendDataEvent.trend)
                     {
-
-                      
-                       string deviceprofileId =  Guid.NewGuid().ToString();
-                        var eventDataEntity = new TrendDataTableEntity(trendDataEvent.d, time)
+                        long time = item.T;
+                        string deviceprofileId = Guid.NewGuid().ToString();
+                        var eventDataEntity = new TrendDataTableEntity(deviceId, time)
                         {
                             DeviceId = deviceId,
                             TagId = item.V,
-                            Timestamp = item.T,
+                            DeviceTimeStamp = item.T,
                             DeviceProfileId = deviceprofileId, // Assuming DeviceProfileId is the same as DeviceId
                             Status = true // Example of setting Status
                         };
-                        await _tableStorageRepository.StoreEntityAsync(eventDataEntity);
+                        await _trendDataRepository.TrendDataInsertionAsync(eventDataEntity);
                         logger.LogInformation($" DeviceId: {eventDataEntity.DeviceId} details Successfully Stored in Azure Table Storage");
                     }
                 }
@@ -86,11 +87,12 @@ namespace TrendDataInjestion
                     logger.LogError($"Error processing event: {e.Message}");
 
                 }
-            }
 
-            
+            }
+        }
+          
         }
     }
-}
+
 
 

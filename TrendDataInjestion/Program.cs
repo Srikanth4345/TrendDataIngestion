@@ -10,20 +10,13 @@ var host = new HostBuilder()
     .ConfigureServices(services =>
     {
 
-        services.AddSingleton<ITrendDataRepository>(provider =>
+        services.AddScoped<ITrendDataRepository>(provider =>
         {
             var connectionString = Environment.GetEnvironmentVariable("TableStorageConnectionString");
-            var tableName = "TrendDataTable"; // Replace with your table name
+            var tableName = "TrendDataTable";
             return new TrendDataRepository(connectionString, tableName);
         });
 
-        // Register ITableStorageRepository with TableStorageRepository implementation
-        services.AddSingleton<ITableStorageRepository>(provider =>
-        {
-            var connectionString = Environment.GetEnvironmentVariable("TableStorageConnectionString");
-            var tableName = "TrendDataTable"; // Replace with your table name
-            return new TableStorageRepository(connectionString, tableName);
-        });
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
         

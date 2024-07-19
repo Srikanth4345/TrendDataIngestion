@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrendEventData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2617f8efb80fadfe909e577dc84fb9c58320e379")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+198f5488f03f5001b7b3bd4db27f7bf293e7272a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrendEventData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrendEventData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,12 @@
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\bin\Debug\net8.0\ModelLibrary.deps.json
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\bin\Debug\net8.0\ModelLibrary.dll
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\bin\Debug\net8.0\ModelLibrary.pdb
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.AssemblyInfoInputs.cache
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.AssemblyInfo.cs
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.sourcelink.json
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.dll
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\refint\ModelLibrary.dll
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ModelLibrary.pdb
+C:\Users\lttsadmin\TrendDataInjestion\ModelLibrary\obj\Debug\net8.0\ref\ModelLibrary.dll
