@@ -1,0 +1,11 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "TrendEventHubConsumerGroup": "$Default",
+    "TrendEventHubName": "ev-iotproject",
+    "TableStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=saiotproject1;AccountKey=I0LTJzmXOLOfts9JkWd+S460UMrACaJYLpkSWpDeUjVBxQHz8SHT6KM5vZPXZBD5v6UdbhRHb5NQ+ASt7C1zSQ==;EndpointSuffix=core.windows.net",
+    "TrendEventHubConnectionString": "Endpoint=sb://en-iotproject.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=pQYHdGaFldnfNqsgA3/THivy3eQIRbkAa+AEhOQ9O34="
+  }
+}
